@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Joker | landing Page UI Design</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<header>
+		<a href="#" class="logo"><img src="assets/logo.png"></a>
+		<div class="toggle"><img src="assets/toggle.png"></div>
+	</header>
+	<div class="banner">
+		<div class="content">
+			<h2>Put on a <span>Happy</span> face</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. </p>
+			<a href="#" class="play" onclick="toggle();"><img src="assets/play.png">Watch Trailer</a>
+			<div class="slide"></div>
+			<ul class="sci">
+				<li><a href="#"><img src="assets/facebook.png"></a></li>
+				<li><a href="#"><img src="assets/twitter.png"></a></li>
+				<li><a href="#"><img src="assets/instagram.png"></a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="trailer">  
+		<iframe height="480" width="640"  
+		src="https://www.youtube.com/embed/il_t1WVLNxk"> 
+		</iframe> 
+		<img src="assets/close.png" class="close" onclick="toggle();">
+	</div>
+	<script type="text/javascript">
+		function toggle() {
+			var trailer = document.querySelector('.trailer');
+			var video = document.querySelector('iframe');
+			trailer.classList.toggle('active');
+			video.currentTime = 0;
+			video.pause();
+		}
+	</script>
+</body>
+</html>
